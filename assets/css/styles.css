@@ -2230,7 +2230,7 @@ a.lang-switcher-item:hover {
    -------------------------------------------------------------------------- */
 .hero--map {
   background-color: var(--footer-bg);
-  background-image: url("../images/hero/paris-map.jpg");
+  background-image: url("../images/hero/paris-map-blue.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2242,7 +2242,7 @@ a.lang-switcher-item:hover {
 
 @media (max-width: 720px) {
   .hero--map {
-    background-image: url("../images/hero/paris-map-900.jpg");
+    background-image: url("../images/hero/paris-map-blue-900.jpg");
     background-position: 50% 45%;
   }
 }
