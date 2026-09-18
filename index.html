@@ -118,8 +118,8 @@
 
   <main id="main">
     <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-inner hero-inner--solo">
+    <section class="hero hero--bold">
+      <div class="container hero-inner">
         <div>
           <span class="hero__badge"><span class="dot" aria-hidden="true"></span> Disponible 24h/24, 7j/7</span>
           <h1>Personne ne prévoit une panne. Nous, <span class="accent">si.</span></h1>
@@ -134,7 +134,35 @@
               WhatsApp
             </a>
           </div>
+          <ul class="hero__meta">
+            <li><strong>30 min</strong><span>Objectif en cas d'urgence</span></li>
+            <li><strong>7</strong><span>Départements couverts</span></li>
+            <li><strong>24/7</strong><span>Téléphone et WhatsApp</span></li>
+          </ul>
         </div>
+        <form class="quick-form" data-whatsapp-form data-whatsapp-number="33600000000">
+          <h2>Demande rapide</h2>
+          <p class="quick-form__hint">Pas envie d'appeler tout de suite&nbsp;? Laissez vos infos, ça ouvre WhatsApp avec un message prérempli à nous envoyer.</p>
+          <div class="quick-form__row">
+            <label>
+              <span>Nom</span>
+              <input type="text" name="nom" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Téléphone</span>
+              <input type="tel" name="telephone" autocomplete="tel" required>
+            </label>
+          </div>
+          <label>
+            <span>Où êtes-vous, que se passe-t-il&nbsp;?</span>
+            <textarea name="message" rows="2" required></textarea>
+          </label>
+          <button type="submit" class="btn btn--whatsapp btn--block">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.003a7.94 7.94 0 0 0 6.9-11.9 7.86 7.86 0 0 0-1.35-1.68zm-5.55 12.2h-.003a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.6 6.6 0 0 1 10.2-8.2 6.55 6.55 0 0 1 1.94 4.66 6.6 6.6 0 0 1-6.55 6.63zm3.6-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.19-.5.64-.62.77-.11.13-.23.14-.42.05a5.4 5.4 0 0 1-1.6-.98 6 6 0 0 1-1.1-1.37c-.12-.2 0-.3.09-.4.09-.1.2-.23.3-.35.1-.12.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33-.11 0-.24-.01-.37-.01a.72.72 0 0 0-.52.24c-.18.19-.68.67-.68 1.63s.7 1.9.79 2.03c.1.13 1.36 2.08 3.3 2.91.46.2.82.32 1.1.41.46.15.88.13 1.21.08.37-.06 1.17-.48 1.33-.94.16-.46.16-.86.12-.94-.05-.09-.18-.14-.38-.24z"/></svg>
+            Envoyer via WhatsApp
+          </button>
+          <p class="quick-form__status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
@@ -170,46 +198,36 @@
           <span class="eyebrow">Ce que l'on fait</span>
           <h2>Nos services</h2>
         </div>
-        <div class="service-list">
-          <article class="service-row">
-            <span class="service-row__num">01</span>
-            <div>
-              <h3><a href="services/depannage.html">Dépannage sur place</a></h3>
-              <p>Batterie, pneu, clé, panne d'essence : beaucoup de pannes se règlent directement là où vous êtes arrêté.</p>
-            </div>
-            <span class="service-row__link">En savoir plus →</span>
+        <div class="card-grid card-grid--services">
+          <article class="service-card">
+            <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="7" width="14" height="6" rx="1"/><line x1="16" y1="9" x2="19" y2="9"/><line x1="16" y1="11" x2="19" y2="11"/><line x1="6" y1="7" x2="6" y2="3"/><line x1="10" y1="7" x2="10" y2="3"/></svg>
+            <h3><a href="services/depannage.html">Dépannage sur place</a></h3>
+            <p>Batterie, pneu, clé, panne d'essence : beaucoup de pannes se règlent directement là où vous êtes arrêté.</p>
+            <span class="service-card__link">En savoir plus →</span>
           </article>
-          <article class="service-row">
-            <span class="service-row__num">02</span>
-            <div>
-              <h3><a href="services/remorquage.html">Remorquage</a></h3>
-              <p>Remorquage vers le garage de votre choix quand le véhicule ne peut pas repartir par lui-même.</p>
-            </div>
-            <span class="service-row__link">En savoir plus →</span>
+          <article class="service-card">
+            <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="1" y="9" width="12" height="8" rx="1.5"/><path d="M13 12h4l3 3v2h-7z"/><circle cx="5" cy="19.5" r="1.8"/><circle cx="16.5" cy="19.5" r="1.8"/></svg>
+            <h3><a href="services/remorquage.html">Remorquage</a></h3>
+            <p>Remorquage vers le garage de votre choix quand le véhicule ne peut pas repartir par lui-même.</p>
+            <span class="service-card__link">En savoir plus →</span>
           </article>
-          <article class="service-row">
-            <span class="service-row__num">03</span>
-            <div>
-              <h3><a href="services/recuperation-apres-accident.html">Récupération après accident</a></h3>
-              <p>Prise en charge du véhicule après une collision, une fois la zone sécurisée par les secours.</p>
-            </div>
-            <span class="service-row__link">En savoir plus →</span>
+          <article class="service-card">
+            <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h17a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <h3><a href="services/recuperation-apres-accident.html">Récupération après accident</a></h3>
+            <p>Prise en charge du véhicule après une collision, une fois la zone sécurisée par les secours.</p>
+            <span class="service-card__link">En savoir plus →</span>
           </article>
-          <article class="service-row">
-            <span class="service-row__num">04</span>
-            <div>
-              <h3><a href="services/fourriere.html">Fourrière &amp; stationnement bloqué</a></h3>
-              <p>Sortie de parking souterrain, véhicule mis en fourrière, stationnement bloqué : ce n'est pas le même service qu'un dépannage, on vous explique la différence.</p>
-            </div>
-            <span class="service-row__link">En savoir plus →</span>
+          <article class="service-card">
+            <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/><line x1="4" y1="20" x2="20" y2="20"/></svg>
+            <h3><a href="services/fourriere.html">Fourrière &amp; stationnement bloqué</a></h3>
+            <p>Sortie de parking souterrain, véhicule en fourrière, stationnement bloqué&nbsp;: ce n'est pas le même service qu'un dépannage.</p>
+            <span class="service-card__link">En savoir plus →</span>
           </article>
-          <article class="service-row">
-            <span class="service-row__num">05</span>
-            <div>
-              <h3><a href="services/transport-de-vehicule.html">Transport de véhicule</a></h3>
-              <p>Transport de véhicule hors contexte de panne : achat, changement de garage, mise en stockage.</p>
-            </div>
-            <span class="service-row__link">En savoir plus →</span>
+          <article class="service-card">
+            <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="1" y="6" width="15" height="12" rx="2"/><path d="M16 10h4l3 3v3h-7z"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="20" r="2"/></svg>
+            <h3><a href="services/transport-de-vehicule.html">Transport de véhicule</a></h3>
+            <p>Transport de véhicule hors contexte de panne : achat, changement de garage, mise en stockage.</p>
+            <span class="service-card__link">En savoir plus →</span>
           </article>
         </div>
       </div>
@@ -261,30 +279,65 @@
 
     <!-- Pourquoi nous -->
     <section class="section section--alt">
-      <div class="container">
-        <div class="section-head section-head--center">
+      <div class="container two-col">
+        <div>
           <span class="eyebrow">Pourquoi nous</span>
           <h2>Un réseau qui connaît le secteur</h2>
           <p>On décroche, on vient vite, et le chauffeur qui arrive connaît réellement le secteur, pas juste une adresse sur un GPS.</p>
         </div>
+        <ul class="checklist">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Diagnostic fait sur place avant toute décision de remorquage.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Réparation privilégiée quand c'est possible, plutôt qu'un remorquage systématique.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Remorquage vers le garage de votre choix, pas un partenaire imposé.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Intervention sur la voie publique, en parking souterrain, à domicile ou en entreprise.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Chauffeurs du réseau vérifiés, équipés pour le type de véhicule concerné.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Disponible 24h/24 et 7j/7, week-ends et jours fériés compris.</li>
+        </ul>
       </div>
     </section>
 
     <!-- Zone couverte -->
     <section class="section" id="coverage">
-      <div class="container coverage-layout">
-        <div>
+      <div class="container">
+        <div class="section-head">
           <span class="eyebrow">Où l'on intervient</span>
           <h2>Paris et toute l'Île-de-France</h2>
-          <p>Paris intra-muros, périphérique, grande couronne&nbsp;: 77, 78, 91, 92, 93, 94, 95.</p>
-          <a class="btn btn--outline" href="areas/index.html">Liste des zones →</a>
+          <p>Paris intra-muros, périphérique, et les sept départements de la grande couronne. Trois zones ont déjà leur page dédiée ; les autres suivront.</p>
         </div>
-        <div>
-          <ul class="tag-list">
-            <li><a href="areas/paris-centre.html">Paris centre</a></li>
-            <li><a href="areas/hauts-de-seine-92.html">Hauts-de-Seine (92)</a></li>
-            <li><a href="areas/seine-saint-denis-93.html">Seine-Saint-Denis (93)</a></li>
-          </ul>
+        <ul class="tag-list" style="margin-bottom: var(--space-7);">
+          <li><a href="areas/paris-centre.html">Paris centre</a></li>
+          <li><a href="areas/hauts-de-seine-92.html">Hauts-de-Seine (92)</a></li>
+          <li><a href="areas/seine-saint-denis-93.html">Seine-Saint-Denis (93)</a></li>
+        </ul>
+        <div class="card-grid">
+          <article class="service-card">
+            <h3>77 &mdash; Seine-et-Marne</h3>
+            <p>Meaux, Melun, Fontainebleau, Chelles, Pontault-Combault, et alentours.</p>
+          </article>
+          <article class="service-card">
+            <h3>78 &mdash; Yvelines</h3>
+            <p>Versailles, Saint-Germain-en-Laye, Mantes-la-Jolie, Sartrouville, Rambouillet, et alentours.</p>
+          </article>
+          <article class="service-card">
+            <h3>91 &mdash; Essonne</h3>
+            <p>Évry-Courcouronnes, Massy, Corbeil-Essonnes, Étampes, Savigny-sur-Orge, et alentours.</p>
+          </article>
+          <article class="service-card">
+            <h3>92 &mdash; Hauts-de-Seine</h3>
+            <p>Boulogne-Billancourt, Nanterre, Neuilly-sur-Seine, Courbevoie, Colombes, et alentours.</p>
+          </article>
+          <article class="service-card">
+            <h3>93 &mdash; Seine-Saint-Denis</h3>
+            <p>Saint-Denis, Montreuil, Aubervilliers, Bobigny, Drancy, et alentours.</p>
+          </article>
+          <article class="service-card">
+            <h3>94 &mdash; Val-de-Marne</h3>
+            <p>Créteil, Vitry-sur-Seine, Ivry-sur-Seine, Vincennes, Saint-Maur-des-Fossés, et alentours.</p>
+          </article>
+          <article class="service-card">
+            <h3>95 &mdash; Val-d'Oise</h3>
+            <p>Cergy, Argenteuil, Sarcelles, Pontoise, Franconville, et alentours.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -312,6 +365,18 @@
           <details class="faq-item">
             <summary>Ma voiture est en fourrière, pas en panne, vous pouvez m'aider&nbsp;?<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
             <p>Ce n'est pas le même service. Voir la différence sur notre page <a href="services/fourriere.html">fourrière &amp; stationnement bloqué</a>.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Je ne suis pas sûr de ma position exacte, c'est un problème&nbsp;?<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+            <p>Non. Un repère approximatif suffit pour démarrer : une rue, une sortie de périphérique, un commerce visible. On affine ensuite au téléphone, ou vous pouvez nous partager votre position en direct sur WhatsApp.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Vous intervenez sur toutes les marques et tous les types de véhicules&nbsp;?<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+            <p>Le réseau couvre les voitures et véhicules légers de toutes marques, thermiques, hybrides ou électriques. Précisez le modèle au moment de l'appel pour qu'on envoie un chauffeur équipé en conséquence.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Je préfère écrire plutôt qu'appeler, c'est possible&nbsp;?<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+            <p>Oui, WhatsApp fonctionne aussi bien qu'un appel pour lancer une intervention. Le formulaire rapide en haut de page fait la même chose : il prépare un message avec vos informations et l'ouvre directement dans WhatsApp.</p>
           </details>
         </div>
       </div>

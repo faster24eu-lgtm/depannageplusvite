@@ -43,6 +43,29 @@
     });
   }
 
+  /* Quick-request form: builds a prefilled WhatsApp message, no backend needed */
+  document.querySelectorAll("[data-whatsapp-form]").forEach(function (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var number = form.getAttribute("data-whatsapp-number") || "";
+      var nom = (form.querySelector('[name="nom"]') || {}).value || "";
+      var tel = (form.querySelector('[name="telephone"]') || {}).value || "";
+      var msg = (form.querySelector('[name="message"]') || {}).value || "";
+      var lines = [
+        "Bonjour, je souhaite une intervention.",
+        "Nom : " + nom,
+        "Téléphone : " + tel,
+        "Situation : " + msg,
+      ];
+      var url = "https://wa.me/" + number + "?text=" + encodeURIComponent(lines.join("\n"));
+      var statusEl = form.querySelector(".quick-form__status");
+      if (statusEl) {
+        statusEl.textContent = "Ouverture de WhatsApp avec votre message prérempli...";
+      }
+      window.open(url, "_blank", "noopener");
+    });
+  });
+
   /* Footer year */
   var yearEl = document.getElementById("current-year");
   if (yearEl) {
