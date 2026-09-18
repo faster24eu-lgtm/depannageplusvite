@@ -43,6 +43,39 @@
     });
   }
 
+  /* Language switcher dropdown */
+  document.querySelectorAll(".lang-switcher").forEach(function (wrap) {
+    var btn = wrap.querySelector(".lang-switcher-btn");
+    var menu = wrap.querySelector(".lang-switcher-menu");
+    if (!btn || !menu) return;
+
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var isOpen = !menu.hasAttribute("hidden");
+      if (isOpen) {
+        menu.setAttribute("hidden", "");
+        btn.setAttribute("aria-expanded", "false");
+      } else {
+        menu.removeAttribute("hidden");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!wrap.contains(e.target)) {
+        menu.setAttribute("hidden", "");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        menu.setAttribute("hidden", "");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+
   /* Quick-request form: builds a prefilled WhatsApp message, no backend needed */
   document.querySelectorAll("[data-whatsapp-form]").forEach(function (form) {
     form.addEventListener("submit", function (e) {

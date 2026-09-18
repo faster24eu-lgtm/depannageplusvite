@@ -866,6 +866,92 @@ summary:focus-visible {
 }
 
 /* --------------------------------------------------------------------------
+   Language switcher
+   -------------------------------------------------------------------------- */
+.lang-switcher {
+  position: relative;
+}
+
+.lang-switcher-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 11px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 800;
+  font-family: inherit;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.lang-switcher-btn:hover {
+  border-color: var(--color-text);
+}
+
+.lang-switcher-btn:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.lang-caret {
+  font-size: 0.6rem;
+}
+
+.lang-switcher-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 170px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  z-index: 110;
+  padding: 4px;
+}
+
+.lang-switcher-menu[hidden] {
+  display: none;
+}
+
+.lang-switcher-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: inherit;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+button.lang-switcher-item:hover,
+a.lang-switcher-item:hover {
+  background: var(--color-bg-alt);
+}
+
+.lang-switcher-item:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: -2px;
+}
+
+.lang-switcher-item.is-active::after {
+  content: "✓";
+  margin-left: auto;
+  font-weight: 900;
+}
+
+/* --------------------------------------------------------------------------
    Sticky mobile call bar
    -------------------------------------------------------------------------- */
 .mobile-call-bar {
