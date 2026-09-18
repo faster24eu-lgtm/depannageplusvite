@@ -2224,3 +2224,35 @@ a.lang-switcher-item:hover {
     display: none;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Hero with the Paris road map behind the content
+   -------------------------------------------------------------------------- */
+.hero--map {
+  background-color: var(--footer-bg);
+  background-image: url("../images/hero/paris-map.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero--map::before {
+  content: none;
+}
+
+@media (max-width: 720px) {
+  .hero--map {
+    background-image: url("../images/hero/paris-map-900.jpg");
+    background-position: 50% 45%;
+  }
+}
+
+.hero--map h1,
+.hero--map .hero__lede,
+.hero--map .hero__badge {
+  text-shadow: 0 1px 14px rgba(23, 20, 15, 0.95), 0 0 3px rgba(23, 20, 15, 0.8);
+}
+
+.hero--map .hero__lede {
+  color: var(--footer-text);
+}
