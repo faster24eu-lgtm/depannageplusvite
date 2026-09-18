@@ -1,12 +1,12 @@
 /* ==========================================================================
-   Faster Breakdown Recovery — Core Stylesheet
+   Depannage Plus Vite: core stylesheet
    Mobile-first, no framework dependencies.
    Light, high-contrast, editorial industrial style: bold system typography,
    flat colour, hairline borders, restrained radius. No gradients, no blur.
    ========================================================================== */
 
 :root {
-  /* Colour system — light, warm-neutral base */
+  /* Colour system: light, warm-neutral base */
   --color-bg: #f6f6f4;
   --color-bg-alt: #edeae3;
   --color-surface: #ffffff;
@@ -37,7 +37,7 @@
   --footer-text-muted: #a8a392;
   --footer-heading: #f2b700;
 
-  /* Typography — real system stack, no webfont dependency */
+  /* Typography: real system stack, no webfont dependency */
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
@@ -695,7 +695,7 @@ summary:focus-visible {
   }
 }
 
-/* Photo placeholder frame — used in the hero and gallery until real
+/* Photo placeholder frame, used in the hero and gallery until real
    business photography is added (see assets/images/README.md) */
 .photo-frame {
   position: relative;
@@ -737,7 +737,7 @@ summary:focus-visible {
 }
 
 /* --------------------------------------------------------------------------
-   Bold hero variant — dark band with an original decorative pattern
+   Bold hero variant: dark band with an original decorative pattern
    (no stock photography; real business photos replace this later)
    -------------------------------------------------------------------------- */
 .hero--bold {
@@ -791,7 +791,7 @@ summary:focus-visible {
 }
 
 /* --------------------------------------------------------------------------
-   Quick-request form — sends the message straight to WhatsApp,
+   Quick-request form: sends the message straight to WhatsApp,
    no third-party form service, works with zero backend
    -------------------------------------------------------------------------- */
 .quick-form {
@@ -1599,7 +1599,7 @@ a.lang-switcher-item:hover {
 }
 
 /* --------------------------------------------------------------------------
-   Footer (dark / accent — deliberately distinct from the light page body)
+   Footer (dark / accent, deliberately distinct from the light page body)
    -------------------------------------------------------------------------- */
 .site-footer {
   background: var(--footer-bg);
@@ -2036,4 +2036,191 @@ a.lang-switcher-item:hover {
   border-radius: 4px;
   font-size: 0.85em;
   font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Dark theme (toggled via data-theme on <html>)
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #121110;
+  --color-bg-alt: #1a1815;
+  --color-surface: #1e1b17;
+  --color-surface-raised: #1e1b17;
+  --color-border: #34302a;
+  --color-border-strong: #4b463d;
+  --color-text: #ece8dd;
+  --color-text-muted: #b9b4a6;
+  --color-text-faint: #8f8a7b;
+  --color-primary-dark: #f2b700;
+  --color-focus: #7aa8ff;
+  --color-success: #4ec37f;
+  --footer-bg: #0d0c0a;
+  --footer-bg-alt: #171410;
+  --footer-border: #2a2620;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-text);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Cookie consent banner
+   -------------------------------------------------------------------------- */
+.cookie-banner {
+  position: fixed;
+  left: var(--space-4);
+  right: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 300;
+  max-width: 560px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-5);
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-banner h2 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-2);
+}
+
+.cookie-banner p {
+  font-size: 0.9rem;
+  margin-bottom: var(--space-4);
+}
+
+.cookie-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.cookie-banner__actions .btn {
+  flex: 1 1 140px;
+}
+
+@media (max-width: 959px) {
+  .cookie-banner {
+    bottom: 76px;
+  }
+}
+
+.footer-link-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--footer-text-muted);
+  cursor: pointer;
+}
+
+.footer-link-btn:hover {
+  color: var(--color-primary-light);
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Department list (coverage) and legal pages
+   -------------------------------------------------------------------------- */
+.dept-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.dept-list li {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dept-list strong {
+  color: var(--color-text);
+  font-weight: 800;
+}
+
+.dept-list span {
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 720px) {
+  .dept-list li {
+    grid-template-columns: 14rem 1fr;
+    gap: var(--space-5);
+  }
+}
+
+.legal {
+  max-width: 760px;
+}
+
+.legal h2 {
+  font-size: 1.35rem;
+  margin-top: var(--space-7);
+}
+
+.legal .legal__updated {
+  font-size: 0.85rem;
+  color: var(--color-text-faint);
+}
+
+/* Header fit between 960px and 1180px: keep nav on one line, icon-only call button */
+@media (min-width: 960px) {
+  .main-nav {
+    gap: var(--space-5);
+  }
+
+  .main-nav a,
+  .brand > span {
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1179px) {
+  .header-call span {
+    display: none;
+  }
 }
