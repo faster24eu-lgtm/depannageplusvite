@@ -147,6 +147,35 @@
       </div>
     </section>
 
+    <!-- Demande rapide -->
+    <section class="section">
+      <div class="container" style="max-width:640px;">
+        <form class="quick-form" data-whatsapp-form data-whatsapp-number="33600000000">
+          <h2>Demande rapide</h2>
+          <p class="quick-form__hint">Laissez vos infos, ça ouvre WhatsApp avec un message prérempli à nous envoyer.</p>
+          <div class="quick-form__row">
+            <label>
+              <span>Nom</span>
+              <input type="text" name="nom" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Téléphone</span>
+              <input type="tel" name="telephone" autocomplete="tel" required>
+            </label>
+          </div>
+          <label>
+            <span>Où êtes-vous, que se passe-t-il&nbsp;?</span>
+            <textarea name="message" rows="2" required></textarea>
+          </label>
+          <button type="submit" class="btn btn--whatsapp btn--block">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.003a7.94 7.94 0 0 0 6.9-11.9 7.86 7.86 0 0 0-1.35-1.68zm-5.55 12.2h-.003a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.6 6.6 0 0 1 10.2-8.2 6.55 6.55 0 0 1 1.94 4.66 6.6 6.6 0 0 1-6.55 6.63zm3.6-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.19-.5.64-.62.77-.11.13-.23.14-.42.05a5.4 5.4 0 0 1-1.6-.98 6 6 0 0 1-1.1-1.37c-.12-.2 0-.3.09-.4.09-.1.2-.23.3-.35.1-.12.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33-.11 0-.24-.01-.37-.01a.72.72 0 0 0-.52.24c-.18.19-.68.67-.68 1.63s.7 1.9.79 2.03c.1.13 1.36 2.08 3.3 2.91.46.2.82.32 1.1.41.46.15.88.13 1.21.08.37-.06 1.17-.48 1.33-.94.16-.46.16-.86.12-.94-.05-.09-.18-.14-.38-.24z"/></svg>
+            Envoyer via WhatsApp
+          </button>
+          <p class="quick-form__status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
     <section class="cta-band section">
       <div class="container">
         <h2>Voiture immobilisée&nbsp;?</h2>
