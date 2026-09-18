@@ -17,7 +17,7 @@ window.SITE_CONFIG = {
     display: "contact@depannageplusvite.fr",
   },
   whatsapp: {
-    href: "https://wa.me/33600000000?text=Bonjour%2C%20j%27ai%20besoin%20d%27aide%20pour%20mon%20v%C3%A9hicule.",
+    base: "https://wa.me/33600000000",
     display: "+33 6 00 00 00 00",
   },
 };

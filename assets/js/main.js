@@ -36,7 +36,9 @@
       el.textContent = cfg.email.display;
     });
     document.querySelectorAll('[data-contact="whatsapp-href"]').forEach(function (el) {
-      el.setAttribute("href", cfg.whatsapp.href);
+      var current = el.getAttribute("href") || "";
+      var q = current.indexOf("?text=");
+      el.setAttribute("href", cfg.whatsapp.base + (q > -1 ? current.slice(q) : ""));
     });
     document.querySelectorAll('[data-contact="whatsapp-display"]').forEach(function (el) {
       el.textContent = cfg.whatsapp.display;
@@ -169,10 +171,10 @@
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute("content", theme === "dark" ? "#121110" : "#17140f");
+    if (meta) meta.setAttribute("content", theme === "dark" ? "#0e1a3a" : "#2057db");
   }
 
-  var headerCta = document.querySelector(".header-cta");
+  var headerCta = document.querySelector(".topbar__right") || document.querySelector(".header-cta");
   if (headerCta) {
     var toggle = document.createElement("button");
     toggle.type = "button";
@@ -194,7 +196,7 @@
       }
       syncToggleLabel();
     });
-    headerCta.insertBefore(toggle, headerCta.firstChild);
+    headerCta.appendChild(toggle);
   }
 
   /* Cookie consent banner: nothing optional runs unless accepted */
