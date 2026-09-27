@@ -133,20 +133,37 @@
     </div>
   </nav>
   <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <span class="eyebrow">101 départements</span>
-        <h1>Dépannage et remorquage dans toute la France</h1>
-        <p class="page-hero__lede">Les pages Île-de-France restent en place. Ici, le reste du pays : une page par département, avec les villes, les axes, et ce qu'il faut dire au téléphone. Le délai n'est pas celui de Paris.</p>
-        <div class="hero__actions" style="margin-top:1.5rem;">
-          <a class="btn btn--primary btn--lg" href="tel:+33100000000" data-contact="phone-href">Appeler maintenant</a>
-          <a class="btn btn--outline btn--lg" href="../areas/index.html">Voir l'Île-de-France</a>
+    <section class="hero hero--bold hero--map">
+      <div class="container hero-inner">
+        <div>
+          <span class="hero__badge"><span class="dot" aria-hidden="true"></span> Métropole et outre-mer</span>
+          <h1>Toute la France, <span class="accent">un département à la fois.</span></h1>
+          <p class="hero__lede">Les pages Paris et Île-de-France restent celles d'origine. Ici, une page par département, écrite avec ses villes et ses axes. Le délai de 30 minutes de Paris ne s'applique pas.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="tel:+33100000000" data-contact="phone-href">Appeler maintenant</a>
+            <a class="btn btn--outline btn--lg" href="../areas/index.html">Voir l'Île-de-France</a>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container prose">
-        <p>Dépannage Plus Vite met en relation avec un chauffeur du secteur. Batterie, pneu, carburant, remorquage, transport. Le prix est dit avant le départ. Sur autoroute, la borne orange déclenche le dépanneur agréé : un appel depuis le site ne remplace pas ça.</p>
+        <form class="quick-form" data-whatsapp-form data-whatsapp-number="33600000000">
+          <h2>Demande rapide</h2>
+          <p class="quick-form__hint">Indiquez le département et un point de repère. Le message part sur WhatsApp, rien n'est envoyé avant un oui sur le tarif.</p>
+          <div class="quick-form__row">
+            <label>
+              <span>Nom</span>
+              <input type="text" name="nom" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Téléphone</span>
+              <input type="tel" name="telephone" autocomplete="tel" required>
+            </label>
+          </div>
+          <label>
+            <span>Où êtes-vous, que se passe-t-il&nbsp;?</span>
+            <textarea name="message" rows="2" required placeholder="Département, route, ce qui est arrivé"></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary btn--block">Envoyer via WhatsApp</button>
+          <p class="quick-form__status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
     <section class="section section--alt">
